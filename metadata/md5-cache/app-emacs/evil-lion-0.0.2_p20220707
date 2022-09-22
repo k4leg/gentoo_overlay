@@ -1,0 +1,14 @@
+BDEPEND=>=app-emacs/evil-1.0.0 >=app-editors/emacs-24.3:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Evil align operator
+EAPI=8
+HOMEPAGE=https://github.com/edkolev/evil-lion/
+INHERIT=elisp
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+RDEPEND=>=app-emacs/evil-1.0.0 >=app-editors/emacs-24.3:*
+RESTRICT=mirror test
+SLOT=0
+SRC_URI=https://github.com/edkolev/evil-lion/archive/a55eb647422342f6b1cf867f797b060b3645d9d8.tar.gz -> evil-lion-0.0.2_p20220707.tar.gz
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
+_md5_=d0d73b5d0db855b0f76abbe00828049a

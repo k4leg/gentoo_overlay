@@ -1,0 +1,14 @@
+BDEPEND=>=app-emacs/evil-1.2.0 >=app-editors/emacs-24.1:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Increment/decrement numbers
+EAPI=8
+HOMEPAGE=https://github.com/juliapath/evil-numbers/
+INHERIT=elisp
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+RDEPEND=>=app-emacs/evil-1.2.0 >=app-editors/emacs-24.1:*
+RESTRICT=mirror test
+SLOT=0
+SRC_URI=https://github.com/juliapath/evil-numbers/archive/7bd9bb0bce2ed61fa256952fbf37fc5259928925.tar.gz -> evil-numbers-0.7_p20220801.tar.gz
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
+_md5_=18b1d7f72a68848426b6993b11ce1851

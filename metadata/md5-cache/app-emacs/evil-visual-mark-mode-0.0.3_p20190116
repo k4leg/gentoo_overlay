@@ -1,0 +1,14 @@
+BDEPEND=>=app-emacs/evil-1.0.9 >=app-emacs/dash-2.10 >=app-editors/emacs-23.1:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Display Evil marks on buffer
+EAPI=8
+HOMEPAGE=https://github.com/roman/evil-visual-mark-mode/
+INHERIT=elisp
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+RDEPEND=>=app-emacs/evil-1.0.9 >=app-emacs/dash-2.10 >=app-editors/emacs-23.1:*
+RESTRICT=mirror test
+SLOT=0
+SRC_URI=https://github.com/roman/evil-visual-mark-mode/archive/ac5997971972a9251f140b5542d82790ca4a43b4.tar.gz -> evil-visual-mark-mode-0.0.3_p20190116.tar.gz
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
+_md5_=a22c4838ba3df627e9b5685d15d261c1

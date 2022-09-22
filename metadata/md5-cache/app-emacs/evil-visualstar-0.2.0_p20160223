@@ -1,0 +1,14 @@
+BDEPEND=app-emacs/evil >=app-editors/emacs-23.1:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Starts a * or # search from the visual selection
+EAPI=8
+HOMEPAGE=https://github.com/bling/evil-visualstar/
+INHERIT=elisp
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+RDEPEND=app-emacs/evil >=app-editors/emacs-23.1:*
+RESTRICT=mirror test
+SLOT=0
+SRC_URI=https://github.com/bling/evil-visualstar/archive/06c053d8f7381f91c53311b1234872ca96ced752.tar.gz -> evil-visualstar-0.2.0_p20160223.tar.gz
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
+_md5_=ac38eb765d2e0232848ebb4435910537
