@@ -14,15 +14,13 @@ KEYWORDS="~amd64"
 
 src_install() {
 	dodir /usr/lib64/emacs-tree-sitter-langs-grammar
-	for lang in agda bash c c-sharp cpp css d elixir elm fluent go haskell \
-				hcl html janet-simple java javascript jsdoc json julia nix \
-				ocaml perl pgn php prisma python ruby rust scala swift \
-				typescript verilog yaml zig
+	for lang in agda bash c c-sharp cpp css d elixir elm fluent \
+	    go haskell hcl html janet-simple java javascript jsdoc \
+	    json julia nix ocaml perl pgn php prisma python ruby \
+	    rust scala swift typescript verilog yaml zig
 	do
 		ln -s "../libtree-sitter-${lang}.so" \
 		   "${ED}/usr/lib64/emacs-tree-sitter-langs-grammar/${lang}.so"
-		#dosym "/usr/lib64/emacs-tree-sitter-langs-grammar/${lang}.so" \
-		#	  "../libtree-sitter-${lang}.so"
 	done
 	echo -n "${PV}" >"${ED}/usr/lib64/emacs-tree-sitter-langs-grammar/BUNDLE-VERSION"
 }
