@@ -11,4 +11,4 @@ RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/TheBB/evil-indent-plus/archive/b4dacbfdb57f474f798bfbf5026d434d549eb65c.tar.gz -> evil-indent-plus-1.0.1_p20220106.tar.gz
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
-_md5_=eb7d8548bb31317008cb928e10ea3feb
+_md5_=3976f0bfb38252e2edf1a07d914099f1

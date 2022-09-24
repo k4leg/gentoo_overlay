@@ -11,4 +11,4 @@ RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/gabesoft/evil-mc/archive/63fd2fe0c213a4cc31c464d246f92931c4cb720f.tar.gz -> evil-mc-0.0.3_p20220118.tar.gz
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
-_md5_=33eb0a3fffa6841f293e331f39d8804b
+_md5_=01262e8162c2a1ae380e13a8171b9ec7

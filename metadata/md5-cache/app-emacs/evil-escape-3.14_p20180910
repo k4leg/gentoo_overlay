@@ -11,4 +11,4 @@ RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/syl20bnr/evil-escape/archive/f4e9116bfbaac8c9d210c17ad488e0982291245f.tar.gz -> evil-escape-3.14_p20180910.tar.gz
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
-_md5_=0807009eb8970799c7007f831eb8dd9b
+_md5_=078398fea7e1e142218769648798b986

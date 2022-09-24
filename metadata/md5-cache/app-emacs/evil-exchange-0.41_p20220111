@@ -11,4 +11,4 @@ RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/Dewdrops/evil-exchange/archive/5f0a2d41434c17c6fb02e4f744043775de1c63a2.tar.gz -> evil-exchange-0.41_p20220111.tar.gz
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
-_md5_=2e5f74d65fb53c4035ff2fa8daa79357
+_md5_=7d6f36c2e4a26569fa454014125e4077

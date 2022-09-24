@@ -11,4 +11,4 @@ RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/emacs-evil/evil-surround/archive/c9e1449bf3f740b5e9b99e7820df4eca7fc7cf02.tar.gz -> evil-surround-1.0.3_p20220404.tar.gz
 _eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
-_md5_=4fd8628b9f9a51817cae5b7d7f885f81
+_md5_=52ecd666468c8f48987705d560c5cd44
