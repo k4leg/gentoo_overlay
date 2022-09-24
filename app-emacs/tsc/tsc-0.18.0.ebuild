@@ -4,44 +4,13 @@
 
 EAPI=8
 NEED_EMACS=25.1
-TREE_SITTER_V=0.20.0
 CRATES="
-	aho-corasick-0.7.18
-	anyhow-1.0.51
-	cc-1.0.72
-	cfg-if-1.0.0
-	ctor-0.1.21
-	darling-0.10.2
-	darling_core-0.10.2
-	darling_macro-0.10.2
-	emacs-0.18.0
-	emacs-macros-0.17.0
-	emacs_module-0.18.0
-	fnv-1.0.7
-	ident_case-1.0.1
-	libloading-0.7.2
-	memchr-2.4.1
-	once_cell-1.8.0
-	proc-macro2-1.0.33
-	quote-1.0.10
-	regex-1.5.4
-	regex-syntax-0.6.25
-	rustc_version-0.2.3
-	semver-0.9.0
-	semver-parser-0.7.0
-	strsim-0.9.3
-	syn-1.0.82
-	thiserror-1.0.30
-	thiserror-impl-1.0.30
-	unicode-xid-0.2.2
-	winapi-0.3.9
-	winapi-i686-pc-windows-gnu-0.4.0
-	winapi-x86_64-pc-windows-gnu-0.4.0
-
 	aho-corasick-0.7.15
+	aho-corasick-0.7.18
 	ansi_term-0.11.0
 	ansi_term-0.12.1
 	anyhow-1.0.40
+	anyhow-1.0.51
 	arrayref-0.3.6
 	arrayvec-0.5.2
 	ascii-1.0.0
@@ -52,16 +21,25 @@ CRATES="
 	blake2b_simd-0.5.11
 	bumpalo-3.6.1
 	cc-1.0.67
+	cc-1.0.72
 	cfg-if-1.0.0
 	chrono-0.4.19
 	chunked_transfer-1.4.0
 	clap-2.33.3
 	constant_time_eq-0.1.5
 	crossbeam-utils-0.8.3
+	ctor-0.1.21
+	darling-0.10.2
+	darling_core-0.10.2
+	darling_macro-0.10.2
 	difference-2.0.0
 	dirs-3.0.1
 	dirs-sys-0.3.5
 	either-1.6.1
+	emacs-0.18.0
+	emacs-macros-0.17.0
+	emacs_module-0.18.0
+	fnv-1.0.7
 	form_urlencoded-1.0.1
 	getrandom-0.1.16
 	getrandom-0.2.2
@@ -69,6 +47,7 @@ CRATES="
 	hashbrown-0.9.1
 	hermit-abi-0.1.18
 	html-escape-0.2.6
+	ident_case-1.0.1
 	idna-0.2.2
 	indexmap-1.6.1
 	itoa-0.4.7
@@ -76,15 +55,20 @@ CRATES="
 	lazy_static-1.4.0
 	libc-0.2.86
 	libloading-0.7.0
+	libloading-0.7.2
 	log-0.4.14
 	matches-0.1.8
 	memchr-2.3.4
+	memchr-2.4.1
 	num-integer-0.1.44
 	num-traits-0.2.14
 	once_cell-1.7.0
+	once_cell-1.8.0
 	percent-encoding-2.1.0
 	ppv-lite86-0.2.10
 	proc-macro2-1.0.24
+	proc-macro2-1.0.33
+	quote-1.0.10
 	quote-1.0.9
 	rand-0.8.3
 	rand_chacha-0.3.0
@@ -94,23 +78,32 @@ CRATES="
 	redox_syscall-0.2.5
 	redox_users-0.3.5
 	regex-1.4.3
+	regex-1.5.4
 	regex-syntax-0.6.22
+	regex-syntax-0.6.25
 	remove_dir_all-0.5.3
 	rust-argon2-0.8.3
 	rustc-hash-1.1.0
+	rustc_version-0.2.3
 	ryu-1.0.5
 	same-file-1.0.6
+	semver-0.9.0
+	semver-parser-0.7.0
 	serde-1.0.123
 	serde_derive-1.0.123
 	serde_json-1.0.63
 	smallbitvec-2.5.1
 	spin-0.7.1
 	strsim-0.8.0
+	strsim-0.9.3
 	syn-1.0.60
+	syn-1.0.82
 	tempfile-3.2.0
 	textwrap-0.11.0
 	thiserror-1.0.25
+	thiserror-1.0.30
 	thiserror-impl-1.0.25
+	thiserror-impl-1.0.30
 	thread_local-1.1.3
 	time-0.1.43
 	tiny_http-0.8.0
@@ -121,12 +114,13 @@ CRATES="
 	unicode-normalization-0.1.17
 	unicode-width-0.1.8
 	unicode-xid-0.2.1
+	unicode-xid-0.2.2
 	url-2.2.1
 	utf8-width-0.1.4
 	vec_map-0.8.2
 	walkdir-2.3.1
-	wasi-0.9.0+wasi-snapshot-preview1
 	wasi-0.10.2+wasi-snapshot-preview1
+	wasi-0.9.0+wasi-snapshot-preview1
 	wasm-bindgen-0.2.71
 	wasm-bindgen-backend-0.2.71
 	wasm-bindgen-macro-0.2.71
@@ -162,17 +156,22 @@ PATCHES=("${FILESDIR}/01-fix_cargo_toml.patch")
 
 SITEFILE="50${PN}-gentoo.el"
 
-pkg_setup() {
-	elisp_pkg_setup
-}
-
 src_unpack() {
-	local archive shasum pkg
 	cargo_src_unpack
 	elisp_src_unpack
+}
+
+src_configure() {
+	elisp_src_configure
+	cargo_src_configure
+}
+
+src_compile() {
+	local archive shasum pkg
 	cd "${WORKDIR}/tree-sitter-improve-text-provider/lib" || die
-	cargo package || die
-	archive="../target/package/tree-sitter-${TREE_SITTER_V}.crate"
+	cargo_src_compile
+	cargo package ${ECARGO_ARGS[@]} || die
+	archive="$(find ../target/package -type f -name 'tree-sitter-*.crate')"
 	tar -xf "${archive}" -C "${ECARGO_VENDOR}/" || die
 	shasum="$(sha256sum "${archive}" | cut -d' ' -f1)"
 	pkg="$(basename "${archive}" .crate)"
@@ -182,20 +181,7 @@ src_unpack() {
 		"files": {}
 	}
 EOF
-	cargo_gen_config
 	cd - || die
-}
-
-src_prepare() {
-	elisp_src_prepare
-}
-
-src_configure() {
-	elisp_src_configure
-	cargo_src_configure
-}
-
-src_compile() {
 	cargo_src_compile
 	elisp_src_compile
 }
@@ -204,12 +190,4 @@ src_install() {
 	elisp_src_install
 	echo -n "${PV}" >DYN-VERSION
 	elisp-install "${PN}" tsc-dyn.so DYN-VERSION
-}
-
-pkg_postinst() {
-	elisp_pkg_postinst
-}
-
-pkg_postrm() {
-	elisp_pkg_postrm
 }
