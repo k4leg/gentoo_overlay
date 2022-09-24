@@ -25,3 +25,11 @@ PATCHES=("${FILESDIR}/01-fix_language_path.patch")
 
 ELISP_REMOVE="tree-sitter-langs-tests.el"
 SITEFILE="50${PN}-gentoo.el"
+
+src_install() {
+	elisp_src_install
+	(
+		insinto "${SITELISP}/${PN}/"
+		doins -r queries/
+	)
+}
