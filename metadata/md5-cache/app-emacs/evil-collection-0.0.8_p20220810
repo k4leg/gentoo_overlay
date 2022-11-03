@@ -10,5 +10,5 @@ RDEPEND=>=app-emacs/evil-1.2.13 >=app-emacs/annalist-1.0 >=app-editors/emacs-26.
 RESTRICT=mirror test
 SLOT=0
 SRC_URI=https://github.com/emacs-evil/evil-collection/archive/665d5c99e216c7b18856f7ceda7c91ea5669f904.tar.gz -> evil-collection-0.0.8_p20220810.tar.gz
-_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	c1c17e9c24d72d3bd58c611de8116fb6
+_eclasses_=elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	elisp	8aab2c847b5894dc40503ae1d203abcf
 _md5_=fca4267be1b205cb9360f05d43c03a88
