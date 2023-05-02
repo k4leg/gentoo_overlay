@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="mirror test"
 
-RDEPEND=">=app-emacs/compat-29.1.3.0"
+RDEPEND=">=app-emacs/compat-29.1.4.0"
 BDEPEND="${RDEPEND}"
 
 ELISP_TEXINFO="embark.texi"
