@@ -1,4 +1,4 @@
-BDEPEND=>=app-editors/emacs-25.2:*
+BDEPEND=>=app-emacs/compat-29.1.4.1 >=app-editors/emacs-25.2:*
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=Minor-mode menu for the mode line
 EAPI=8
@@ -6,9 +6,9 @@ HOMEPAGE=https://github.com/tarsius/minions/
 INHERIT=elisp
 KEYWORDS=~amd64
 LICENSE=GPL-3+
-RDEPEND=>=app-editors/emacs-25.2:*
+RDEPEND=>=app-emacs/compat-29.1.4.1 >=app-editors/emacs-25.2:*
 RESTRICT=mirror test
 SLOT=0
-SRC_URI=https://github.com/tarsius/minions/archive/refs/tags/v0.3.7.tar.gz -> minions-0.3.7.tar.gz
+SRC_URI=https://github.com/tarsius/minions/archive/refs/tags/v1.0.0.tar.gz -> minions-1.0.0.tar.gz
 _eclasses_=elisp-common	01bc6dc778b74a9deebe4e419a3b790e	elisp	7190c722d9e06fabcae26ef1e1dc9183
-_md5_=814412ad08ed49184553d75e72ad0410
+_md5_=8d2603d3d7f16c6860864310c51371c2

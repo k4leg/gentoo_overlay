@@ -9,6 +9,6 @@ LICENSE=GPL-3+
 RDEPEND=>=app-emacs/evil-1.0 >=app-editors/emacs-24.4:*
 RESTRICT=mirror test
 SLOT=0
-SRC_URI=https://github.com/Somelauw/evil-org-mode/archive/2f2c97c3a161ad8c7bf911a7deaf0df99e514865.tar.gz -> evil-org-1.0.3.tar.gz
+SRC_URI=https://github.com/Somelauw/evil-org-mode/archive/b1f309726b1326e1a103742524ec331789f2bf94.tar.gz -> evil-org-1.0.3_p20221002.tar.gz
 _eclasses_=elisp-common	01bc6dc778b74a9deebe4e419a3b790e	elisp	7190c722d9e06fabcae26ef1e1dc9183
-_md5_=a2b6403a63b905d795c9d2ef9410b2ec
+_md5_=4cdac623a65e8464bab486ec7c26b359

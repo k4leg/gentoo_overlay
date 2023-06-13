@@ -1,4 +1,4 @@
-BDEPEND=app-emacs/evil >=app-editors/emacs-25.1:*
+BDEPEND=app-emacs/evil >=app-editors/emacs-26.1:*
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DESCRIPTION=Comment/uncomment lines efficiently
 EAPI=8
@@ -6,9 +6,9 @@ HOMEPAGE=https://github.com/redguardtoo/evil-nerd-commenter/
 INHERIT=elisp
 KEYWORDS=~amd64
 LICENSE=GPL-3+
-RDEPEND=>=app-editors/emacs-25.1:*
+RDEPEND=>=app-editors/emacs-26.1:*
 RESTRICT=mirror test
 SLOT=0
-SRC_URI=https://github.com/redguardtoo/evil-nerd-commenter/archive/refs/tags/3.5.7.tar.gz -> evil-nerd-commenter-3.5.7.tar.gz
+SRC_URI=https://github.com/redguardtoo/evil-nerd-commenter/archive/refs/tags/3.6.0.tar.gz -> evil-nerd-commenter-3.6.0.tar.gz
 _eclasses_=elisp-common	01bc6dc778b74a9deebe4e419a3b790e	elisp	7190c722d9e06fabcae26ef1e1dc9183
-_md5_=eb617405d8f9e8a1aa2475a0667f1d23
+_md5_=eaa086c6bcd8b5f47a8305faf53f1d64

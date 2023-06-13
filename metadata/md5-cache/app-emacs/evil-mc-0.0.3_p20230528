@@ -9,6 +9,6 @@ LICENSE=MIT
 RDEPEND=>=app-emacs/evil-1.2.14 >=app-editors/emacs-24.3:*
 RESTRICT=mirror test
 SLOT=0
-SRC_URI=https://github.com/gabesoft/evil-mc/archive/63fd2fe0c213a4cc31c464d246f92931c4cb720f.tar.gz -> evil-mc-0.0.3_p20220118.tar.gz
+SRC_URI=https://github.com/gabesoft/evil-mc/archive/bdf893ea6f52fd0f10bece8ddae813658e17bbb4.tar.gz -> evil-mc-0.0.3_p20230528.tar.gz
 _eclasses_=elisp-common	01bc6dc778b74a9deebe4e419a3b790e	elisp	7190c722d9e06fabcae26ef1e1dc9183
-_md5_=01262e8162c2a1ae380e13a8171b9ec7
+_md5_=e966c4edf633677aff2fa33fc7c230fb
